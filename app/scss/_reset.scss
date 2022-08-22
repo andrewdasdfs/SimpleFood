@@ -8,8 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-ol[class],
-ul[class] {
+ol,
+ul {
     padding: 0;
     list-style: none;
 }
@@ -22,14 +22,12 @@ h4,
 h5,
 h6,
 p,
-ol[class],
-ul[class],
+ol,
+ul,
 li,
 figure,
 figcaption,
-blockquote,
-dl,
-dd {
+blockquote {
     margin: 0;
 }
 
@@ -43,4 +41,8 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+a {
+    text-decoration: none;
 }
