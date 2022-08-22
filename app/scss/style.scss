@@ -25,20 +25,6 @@
     }
     &__link {
         font-size: 18px;
-        border-radius: 5px;
-        box-shadow: 0 0 0 2px rgba(249, 250, 255, 1);
-        transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out, color 0.1s ease-in-out;
-        &:focus{
-            box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-        }
-        &:hover {
-            color: $orange-900;
-        }
-        &:active {
-            text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-            box-shadow: 0 0 0 2px rgba(255, 104, 56, 0);
-            color: $dark;
-        }
     }
     &__link--active {
         color: $orange-900;
@@ -50,7 +36,7 @@
     padding: 5px 2px 2px;
     transition: box-shadow 0.15s ease-in-out, opacity 0.1s ease-in;
     &:focus {
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        box-shadow: $box-shadow;
     }
     &:hover {
         opacity: 0.8;
@@ -85,10 +71,10 @@
         }
         &:focus {
             background-color:rgba(255, 122, 80, 0.1);
-            box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+            box-shadow: $box-shadow;
         }
         &:hover {
-            background-color: rgba(255, 122, 80, 1);
+            background-color: $orange-900;
         }
         &:active {
             background-color: rgba(255, 122, 80, 0.1);
@@ -123,6 +109,44 @@
             color: #fff;
             background-color: $orange-900;
         }
+    }
+}
+
+.hero {
+    margin-bottom: 120px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 164px);
+        max-height: 660px;
+        background-image: url("../images/scooter_guy.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    &__box {
+        max-width: 450px;
+    }
+    &__title {
+        font-size: 66px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__title--orange {
+        color: $orange-900;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__btn {
+        padding: 12px 32px;
+        font-size: 18px;
+        letter-spacing: 0.3;
+        margin-right: 35px;
+    }
+    &__link {
+        text-decoration: underline;
     }
 }
 
