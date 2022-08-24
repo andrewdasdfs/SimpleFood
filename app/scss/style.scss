@@ -214,8 +214,10 @@
         border-radius: 5px;
         background-color: #fff;
         box-shadow: 0 0 0 2px inset $gray;
+        transition: box-shadow 0.15s ease-in-out;
         &::placeholder{
             color: $gray;
+            transition: color 0.15s ease-in-out;
         }
         &:focus {
             box-shadow: $box-shadow;
@@ -238,14 +240,84 @@
             margin-right: 15px; 
             background-color: #fff;
             mask-image: url('../images/icons/telegram.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            transition: 0.15s;
         }
         &:focus::before,
         &:hover::before,
         &:active::before {
             background-color: $orange-900;
         }
+    }
+}
+
+.contacts {
+    font-size: 16px;
+    display: flex;
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        background-repeat: no-repeat;
+    }
+    &:nth-child(1)::before {
+        background-image: url('../images/icons/Location.svg');
+    }
+    &:nth-child(2)::before {
+        background-image: url('../images/icons/Calling.svg');
+    }
+    &:nth-child(3)::before {
+        background-image: url('../images/icons/Message.svg');
+    }
+}
+
+.social {
+    display: flex;
+    &__link {
+        width: 39px;
+        height: 39px;
+        margin-right: 13px;
+        border-radius: 50%;
+        background-color: $gray;
+        transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    &__link::before {
+        content: "";
+        display: block;
+        width: 39px;
+        height: 39px;
+        background-color: $dark;
+        mask-repeat: no-repeat;
+        mask-position: 51%;
+        transition: 0.15s;
+    }
+    &__link:nth-child(1)::before {
+        mask-image: url('../images/icons/facebook.svg');
+    }
+    &__link:nth-child(2)::before {
+        mask-image: url('../images/icons/twitter.svg');
+    }
+    &__link:nth-child(3)::before {
+        mask-image: url('../images/icons/instagram.svg');
+    }
+    &__link:focus {
+        box-shadow: $box-shadow;
+        background-color: $background-01;
+    }
+    &__link:hover {
+        background-color: $orange-900;
+    }
+    &__link:hover::before {
+        background-color: #fff;
+    }
+    &__link:active {
+        box-shadow: none;
+        background-color: $background-01;
+    }
+    &__link:active::before {
+        background-color: $orange-900;
     }
 }
 
