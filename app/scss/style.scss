@@ -188,19 +188,19 @@
     }
     &__item {
         &:nth-child(1)>button::before{
-            background-image: url("../images/icons/burger.svg");
+            mask-image: url("../images/icons/burger.svg");
         }
         &:nth-child(2)>button::before{
-            background-image: url("../images/icons/pizza.svg");
+            mask-image: url("../images/icons/pizza.svg");
         }
         &:nth-child(3)>button::before{
-            background-image: url("../images/icons/sandwich.svg");
+            mask-image: url("../images/icons/sandwich.svg");
         }
         &:nth-child(4)>button::before{
-            background-image: url("../images/icons/asia.svg");
+            mask-image: url("../images/icons/asia.svg");
         }
         &:nth-child(5)>button::before{
-            background-image: url("../images/icons/dish.svg");
+            mask-image: url("../images/icons/dish.svg");
         }
     } 
     &__btn {
@@ -212,13 +212,43 @@
         color: $darkBlue-900;
         background-color: #fff;
         box-shadow: 0 0 0 1px $silver-200;
+        transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
         &::before {
             content: "";
             width: 44px;
             height: 44px;
             margin-right: 10px;
-            background-repeat: no-repeat;
-            background-size: contain;
+            background-color: $darkBlue-900;
+            mask-image: no-repeat;
+            mask-image: contain;
+            transition: background-color 0.15s ease-in-out;
+        }
+        &:focus {
+            box-shadow: $box-shadow;
+        }
+        &:hover {
+            box-shadow: $box-shadow;
+            background-color: $background-01;
+            color: $orange-900;
+        }
+        &:hover::before {
+            background-color: $orange-900;
+        }
+        &:active {
+            box-shadow: 0 -5px 12px inset rgba(255, 104, 56, 0.2);
+            background-color: #fff;
+            color: $darkBlue-900;
+        }
+        &:active::before {
+            background-color: $darkBlue-900;
+        }
+    }
+    &__btn--active {
+        background-color: $orange-900;
+        box-shadow: none;
+        color: #fff;
+        &::before {
+            background-color: #fff;
         }
     }
 }
