@@ -46,10 +46,11 @@
                             </li>
                         </ul>
                         <div class="user">
-                            <a class="user__link" href="#">
-                                <span class="user__index"></span>
-                                <span class="sr-only">кнопка поиска по сайту</span>
-                            </a>
+                            <form class="user__serch">
+                                <input class="user__field" type="text" placeholder="Поиск по сатйту">
+                                <button class="user__btn" type="submit" href="#"></button>
+                                <span class="sr-only">поиска по сайту</span>
+                            </form>
                             <a class="user__link" href="#">
                                 <span class="user__index user__index--active">4</span>
                                 <span class="sr-only">перейти в корзину с покупками</span>
@@ -66,7 +67,7 @@
             <section class="hero">
                 <div class="container">
 
-                    <div class="hero__inner">
+                    <div class="hero__inner" style="background-image: url('images/scooter_guy.png');">
                         <div class="hero__box">
                             <h1 class="hero__title">
                                 Доставка
@@ -325,8 +326,8 @@
                         <a class="logo footer-form__logo" href="#">
                             <img class="logo__img" src="images/logo.svg" alt="Логотип компании simple food">
                         </a>
-                        <label class="footer-form__items" for="">
-                            <input class="footer-form__field" type="text" name="mail" required="required"
+                        <label class="footer-form__items" for="mail">
+                            <input class="footer-form__field" type="email" name="mail" required="required"
                                 placeholder="Ваш email">
                             <button class="footer-form__btn btn" type="submit">
                                 Подписаться
