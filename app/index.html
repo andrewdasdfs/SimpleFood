@@ -64,22 +64,28 @@
 
         <main class="main">
 
+            <h1 class="sr-only">
+                Сервис доставки еды
+            </h1>
+
             <section class="hero">
                 <div class="container">
 
                     <div class="hero__inner" style="background-image: url('images/scooter_guy.png');">
                         <div class="hero__box">
-                            <h1 class="hero__title">
+                            <h2 class="hero__title">
                                 Доставка
                                 <span class="hero__title--orange">
                                     за 15 минут
                                 </span>
-                            </h1>
-                            <p class="hero__text">
-                                Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш
-                                счёт
-                            </p>
-                            <button class="hero__btn btn">
+                            </h2>
+                            <div class="hero__text">
+                                <p>
+                                    Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш
+                                    счёт
+                                </p>
+                            </div>
+                            <button class="hero__btn btn" type="button">
                                 Заказать
                             </button>
                             <a class="hero__link link" href="#">
@@ -94,9 +100,9 @@
             <section class="category">
                 <div class="container">
 
-                    <h2 class="category__title title">
+                    <h3 class="category__title title">
                         Популярные категории
-                    </h2>
+                    </h3>
                     <ul class="category__nav">
                         <li class="category__item">
                             <button class="category__btn category__btn--active" type="button">
@@ -128,17 +134,22 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-1.jpg" width="140" height="140"
-                                        alt="Чизбургер с листьями салата">
-                                    <span>
-                                        Чизбургер с листьями салата
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-1.jpg" width="140" height="140"
+                                            alt="Чизбургер с листьями салата">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Чизбургер с листьями салата
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        160 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>160</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -147,16 +158,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-2.jpg" width="140" height="140" alt="Бифбургер">
-                                    <span>
-                                        Бифбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-2.jpg" width="140" height="140" alt="Бифбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Бифбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        190 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>190</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -165,16 +181,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-3.jpg" width="140" height="140" alt="Королевский чизбургер">
-                                    <span>
-                                        Королевский чизбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-3.jpg" width="140" height="140" alt="Королевский чизбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Королевский чизбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        260 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>260</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -183,16 +204,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-4.jpg" width="140" height="140" alt="Черный гамбургер">
-                                    <span>
-                                        Черный гамбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-4.jpg" width="140" height="140" alt="Черный гамбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Черный гамбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        199 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>199</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -201,16 +227,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-5.jpg" width="140" height="140" alt="Чикен бургер">
-                                    <span>
-                                        Чикен бургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-5.jpg" width="140" height="140" alt="Чикен бургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Чикен бургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        180 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>180</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -219,17 +250,22 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-1.jpg" width="140" height="140"
-                                        alt="Чизбургер с листьями салата">
-                                    <span>
-                                        Чизбургер с листьями салата
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-1.jpg" width="140" height="140"
+                                            alt="Чизбургер с листьями салата">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Чизбургер с листьями салата
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        160 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>160</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -238,16 +274,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-2.jpg" width="140" height="140" alt="Бифбургер">
-                                    <span>
-                                        Бифбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-2.jpg" width="140" height="140" alt="Бифбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Бифбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        190 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>190</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -256,16 +297,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-3.jpg" width="140" height="140" alt="Королевский чизбургер">
-                                    <span>
-                                        Королевский чизбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-3.jpg" width="140" height="140" alt="Королевский чизбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Королевский чизбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        260 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>260</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -274,16 +320,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-4.jpg" width="140" height="140" alt="Черный гамбургер">
-                                    <span>
-                                        Черный гамбургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-4.jpg" width="140" height="140" alt="Черный гамбургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Черный гамбургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        199 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>199</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
@@ -292,16 +343,21 @@
                         <li class="category__element">
                             <article class="product-card">
                                 <div class="product-card__top">
-                                    <img src="images/card_img/burg-5.jpg" width="140" height="140" alt="Чикен бургер">
-                                    <span>
-                                        Чикен бургер
-                                    </span>
+                                    <a class="product-card__img" href="#">
+                                        <img src="images/card_img/burg-5.jpg" width="140" height="140" alt="Чикен бургер">
+                                    </a>
+                                    <a class="product-card__name" href="#">
+                                        <span>
+                                            Чикен бургер
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="product-card__bottom">
-                                    <span>
-                                        180 грн.
-                                    </span>
-                                    <button class="product-card__btn btn">
+                                    <div class="product-card__price">
+                                        <span>180</span>
+                                        <span>грн.</span>
+                                    </div>
+                                    <button class="product-card__btn btn" type="button">
                                         В корзину
                                     </button>
                                 </div>
