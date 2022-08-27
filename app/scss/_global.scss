@@ -68,7 +68,17 @@ button {
         color: $dark;
     }
 }
-
+.footer__link--style {
+    transition: text-shadow 0.15s ease-in-out, color 0.1s ease-in-out;
+    &:focus,
+    &:hover {
+        color: $orange-900;
+    }
+    &:active {
+        text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+        color: $dark;
+    }
+}
 .btn {
     border-radius: 5px;
     color: $white;
