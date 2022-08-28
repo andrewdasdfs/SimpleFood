@@ -49,11 +49,12 @@
     display: flex;
     &__serch {
         display: flex;
+        margin-right: 10px;
         &:focus-within .user__field {
             width: 200px;
             margin-right: 30px;
             box-shadow: $box-shadow;
-            padding-left: 10px;
+            padding-left: 15px;
         }
     }
     &__field {
@@ -66,9 +67,9 @@
         color: $darkBlue-900;
         &::placeholder {
             color: $gray;
-            font-style: italic;
             font-weight: 300;
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 1.3;
         }
     }
     &__btn,
@@ -86,8 +87,8 @@
                     color 0.15s ease-in-out;
         &::before {
             content: "";
-            width: 19px;
-            height: 19px;
+            width: 22px;
+            height: 22px;
             mask-size: contain;
             mask-repeat: no-repeat;
             background-color: $darkBlue-900;
@@ -290,6 +291,7 @@
     &__link {
         color: $darkBlue-900;
         position: relative;
+        cursor: pointer;
         &::before {
             content: "";
             position: absolute;
@@ -469,4 +471,3 @@
     }
 }
 
-@import "media";
