@@ -308,7 +308,58 @@
         }
     }
 }
-
+.delivery {
+    margin-bottom: 120px;
+    &__inner {
+        margin: 0 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: left;
+        height: 100vh;
+        max-height: 585px;
+    }
+    &__info {
+        max-width: 470px;
+    }
+    &__title,
+    &__text,
+    &__items {
+        margin-bottom: 30px;
+    }
+    &__item {
+        font-size: 24px;
+        margin-bottom: 20px;
+        display: flex;
+        &::before {
+            content: "";
+            width: 34px;
+            height: 34px;
+            margin-right: 30px;
+            mask-size: contain;
+            mask-repeat: no-repeat;   
+        }
+        &:nth-child(1)::before {
+            mask-image: url('../images/icons/Time.svg');
+            background-color: $orange-900;
+        }
+        &:nth-child(2)::before {
+            mask-image: url('../images/icons/men.svg');
+            background-color: #00AAFF;
+        }
+        &:nth-child(3)::before {
+            mask-image: url('../images/icons/Resturent.svg');
+            background-color: #FF2222;;
+        }
+    }
+    &__btn {
+        font-size: 18px;
+        letter-spacing: 3%;
+        padding: 12px 32px;
+    }
+}
 .footer {
     &__inner {
         display: flex;
