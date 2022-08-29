@@ -356,10 +356,23 @@
     }
     &__btn {
         font-size: 18px;
-        letter-spacing: 3%;
         padding: 12px 32px;
     }
 }
+
+.resturents {
+    text-align: center;
+    margin-bottom: 120px;
+    &__title {
+        margin-bottom: 45px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
 .footer {
     &__inner {
         display: flex;

@@ -23,7 +23,6 @@ a {
 button {
     appearance: none;
     line-height: 1.3;
-    cursor: pointer;
 }
 
 .sr-only {
@@ -83,6 +82,7 @@ button {
 .btn {
     border-radius: 5px;
     color: $white;
+    cursor: pointer;
     background-color: $orange-900;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
         color 0.15s ease-in-out;
@@ -147,5 +147,82 @@ button {
     }
     &:hover {
         box-shadow: 0 0 0 1px $orange-900;
+    }
+}
+
+.resturent-card {
+    display: flex; 
+    flex-direction: column;
+    min-width: 345px;
+    max-width: 370px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    &:hover {
+        box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+    }
+    & img {
+        height: 300px;
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    &__info {
+        text-align: left;
+        padding: 15px 20px 20px;
+    }
+    &__name {
+        display: block;
+        margin-bottom: 20px;
+        & span {
+            font-size: 24px;
+            line-height: 1.3;
+        }
+    }
+    &__times {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & span {
+            display: flex;
+            font-weight: 300;
+            font-size: 18px;
+        }
+        & span::before {
+            content: "";
+            width: 22px;
+            height: 22px;
+            background-image: url('../images/icons/timer.svg');
+            background-size: contain;
+            margin-right: 10px;
+        }
+    }
+    &__btn {
+        width: 80px;
+        height: 33px;
+        border-radius: 20px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 12px;
+            background-color: $white;
+            mask-image: url('../images/icons/arrow_btn.svg');
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;   
+        }
+        &:hover::before{
+           left: 100%; 
+           transform: translate(-200%, -50%);
+        }
+        &:focus::before,
+        &:hover::before,
+        &:active::before {
+            background-color: $orange-900;
+        }
     }
 }
