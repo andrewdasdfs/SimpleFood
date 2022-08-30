@@ -23,6 +23,7 @@ a {
 button {
     appearance: none;
     line-height: 1.3;
+    background-color: transparent;
 }
 
 .sr-only {
@@ -129,8 +130,9 @@ button {
             background-position: center;
         }
     }
-    &__name {
+    &__name h3 {
         font-size: 15px;
+        font-weight: 400;
         line-height: 1.2;
     }
     &__price {
@@ -175,8 +177,9 @@ button {
     &__name {
         display: block;
         margin-bottom: 20px;
-        & span {
+        & h3 {
             font-size: 24px;
+            font-weight: 400;
             line-height: 1.3;
         }
     }

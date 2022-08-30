@@ -6,6 +6,20 @@
 
 .header {
     padding: 60px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid $gray;
+    background-color: $silver-100;
 }
 
 .menu {
@@ -152,11 +166,13 @@
 }
 
 .hero {
-    margin-bottom: 115px;
+    margin-top: 159px;
+    margin-bottom: 120px;
     &__inner {
         display: flex;
         align-items: center;
-        height: calc(100vh - 164px);
+        // height: calc(100vh - 164px);
+        height: 100vh;
         max-height: 660px;
         background-size: auto 100%;
         background-repeat: no-repeat;
@@ -172,7 +188,7 @@
         margin-bottom: 20px;
         color: $darkBlue-900;
     }
-    &__title--orange {
+    &__title span {
         color: $orange-900;
     }
     &__text {
@@ -291,6 +307,7 @@
     }
     &__link {
         color: $darkBlue-900;
+        padding: 0;
         position: relative;
         cursor: pointer;
         &::before {
@@ -566,14 +583,16 @@
         border-top: 1px solid $gray;
         padding: 30px 0;
     }
-}
-
-.footer-form {
-    min-width: 200px;
     &__logo {
         display: block;
         margin-bottom: 30px;
     }
+    &__wrap {
+        min-width: 200px;
+    }
+}
+
+.footer-form {
     &__field {
         width: 100%;
         margin-bottom: 12px;
@@ -582,7 +601,7 @@
         padding: 13px 15px;
         border-radius: 5px;
         background-color: $white;
-        box-shadow: 0 0 0 2px inset $gray;
+        box-shadow: 0 0 0 1px inset $gray;
         transition: box-shadow 0.15s ease-in-out;
         &::placeholder {
             color: $gray;
