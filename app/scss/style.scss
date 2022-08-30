@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -98,7 +99,7 @@
             box-shadow: $box-shadow;
         }
         &:hover {
-            background-color: $orange-900;
+            background-color: $background-03;
         }
         &:hover::before {
             background-color: $white;
@@ -384,11 +385,100 @@
     }
 }
 
+.slick-slider {
+    .slick-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        border: 3px solid $gray;
+        bottom: -12px;
+        transition: background-color 0.15s ease-in-out,
+                    border-color 0.15s ease-in-out,
+                    box-shadow 0.15s ease-in-out;
+        &::before {
+            content: "";
+            width: 11px;
+            height: 19px;
+            background-color: $gray;
+            transition: background-color 0.15s ease-in-out;
+        }
+        &:focus {
+            box-shadow: $box-shadow;
+        }
+        &:hover {
+            border-color: $background-02;
+            background-color: $background-01;
+        }
+        &:hover::before {
+            background-color: $background-02;
+        }
+        &:active {
+            border-color: $background-01;
+            background-color: $background-01;
+        }
+        &:active::before {
+            background-color: $background-03;
+        }
+    }
+    .slick-prev {
+        right: 50%;
+        transform: translateX(-72px);
+        &::before {
+            mask-image: url('../images/icons/prev.svg');
+        }
+    }
+    .slick-next {
+        left: 50%;
+        transform: translateX(72px);
+        &::before {
+            mask-image: url('../images/icons/next.svg');
+        }
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        font-size: 0;
+        background-color: transparent;
+        & li button {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: $gray;
+                    transition: background-color 0.15s ease-in-out,
+                    box-shadow 0.15s ease-in-out;
+        }
+        & li button:focus {
+            box-shadow: $box-shadow;
+        }
+        & li button:hover {
+            box-shadow: $box-shadow-02;
+            background-color: $background-01;
+        }
+        & li button:active {
+            box-shadow: none;
+            background-color: $background-02;
+        }
+        & .slick-active button {
+            background-color: $background-03;
+        }
+        & li:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
 .quote {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 90px;
+    margin-bottom: 55px;
     &__img {
         min-width: 300px;
         height: 300px;
@@ -590,7 +680,7 @@
         &:nth-child(1):hover svg circle,
         &:nth-child(2):hover svg circle,
         &:nth-child(3):hover svg circle {
-            fill: $orange-900;
+            fill: $background-03
         }
         &:nth-child(1):hover svg path,
         &:nth-child(2):hover svg path,
