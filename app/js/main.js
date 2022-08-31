@@ -10,7 +10,7 @@ $(function () {
     });
 
     const headerHeight = $(".menu").outerHeight();
-    $(".menu__link, .greeting__control, .logo").on(
+    $(".menu__link, .logo").on(
         "click",
         function (event) {
             event.preventDefault();

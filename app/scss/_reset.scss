@@ -46,5 +46,13 @@ select {
 }
 
 a {
+    color: $dark;
+    outline: transparent;
     text-decoration: none;
+}
+
+button {
+    appearance: none;
+    line-height: 1.3;
+    background-color: transparent;
 }
