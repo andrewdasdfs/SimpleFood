@@ -350,11 +350,13 @@
             background-color: $white;
         }
     }
+
     &__content {
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(170px, 210px));
         grid-auto-rows: minmax( 300px, auto ); 
         gap: 30px;
+        justify-content: center;
         margin-bottom: 60px;
     }
 
@@ -455,8 +457,9 @@
 
     &__content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat( auto-fit, minmax(345px, 370px));
         gap: 30px;
+        justify-content: center;
     }
 }
 
