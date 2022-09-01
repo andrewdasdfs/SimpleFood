@@ -330,7 +330,7 @@
         mask-image: url("../images/sprite.svg#pizza");
     }
 
-    &__btn-Sandwich::before {
+    &__btn-sandwich::before {
         mask-image: url("../images/sprite.svg#sandwich");
     }
 
@@ -466,7 +466,7 @@
 }
 
 .reviews {
-    margin-bottom: 120px;
+    margin-bottom: 135px;
 
     &__title {
         text-align: center;
@@ -657,6 +657,56 @@
         font-size: 14px;
         line-height: 1.3;
         color: $dark;
+    }
+}
+
+.mobile-app {
+    margin-bottom: 120px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        min-height: 380px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: auto 100%;
+    }
+
+    &__box {
+        max-width: 540px;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        display: inline-block;
+        height: 40px;
+    }
+
+    &__link:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &__app-store {
+        width: 120px;
+        background-image: url('../images/sprite.svg#app_store');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+
+    &__google-play {
+        width: 135px;
+        background-image: url('../images/sprite.svg#google_play');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
     }
 }
 

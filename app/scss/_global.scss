@@ -212,8 +212,8 @@ body {
             content: "";
             width: 22px;
             height: 22px;
-            background-image: url('../images/icons/timer.svg');
-            background-size: contain;
+            background-image: url('../images/sprite.svg#timer');
+            background-size: cover;
             margin-right: 10px;
         }
     }
@@ -224,19 +224,6 @@ body {
         border-radius: 20px;
         position: relative;
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 14px;
-            height: 12px;
-            background-color: $white;
-            mask-image: url('../images/icons/arrow_btn.svg');
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: 0.2s;   
-        }
-
         &:hover::before {
            left: 100%; 
            transform: translate(-200%, -50%);
@@ -246,6 +233,21 @@ body {
         &:hover::before,
         &:active::before {
             background-color: $orange-900;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 12px;
+            background-color: $white;
+            mask-image: url('../images/sprite.svg#arrow_btn');
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;   
         }
     }
 }
