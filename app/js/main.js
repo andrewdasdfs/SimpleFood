@@ -10,7 +10,7 @@ $(function () {
     });
 
     const headerHeight = $(".menu").outerHeight();
-    $(".menu__link, .logo").on(
+    $("").on(
         "click",
         function (event) {
             event.preventDefault();
@@ -34,4 +34,6 @@ $(function () {
         dots: true,
         arrows: true,
     });
+
+    var mixer = mixitup(".category__content");
 });

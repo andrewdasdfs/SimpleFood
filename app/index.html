@@ -105,33 +105,33 @@
                     </h2>
                     <ul class="category__nav">
                         <li class="category__item">
-                            <button class="category__btn category__btn-burger category__btn--active" type="button">
+                            <button class="category__btn category__btn-burger category__btn--active" type="button" data-filter=".category-burger">
                                 Бургеры
                             </button>
                         </li>
                         <li class="category__item">
-                            <button class="category__btn category__btn-pizza" type="button">
+                            <button class="category__btn category__btn-pizza" type="button" data-filter=".category-pizza">
                                 Пицца
                             </button>
                         </li>
                         <li class="category__item">
-                            <button class="category__btn category__btn-sandwich" type="button">
+                            <button class="category__btn category__btn-sandwich" type="button" data-filter=".category-sandwich">
                                 Сендвичи
                             </button>
                         </li>
                         <li class="category__item">
-                            <button class="category__btn category__btn-aisa" type="button">
+                            <button class="category__btn category__btn-asia" type="button" data-filter=".category-asia">
                                 Азиатская кухня
                             </button>
                         </li>
                         <li class="category__item">
-                            <button class="category__btn category__btn-set" type="button">
+                            <button class="category__btn category__btn-set" type="button" data-filter=".category-set">
                                 Cеты
                             </button>
                         </li>
                     </ul>
                     <ul class="category__content">
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-pizza">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -140,7 +140,7 @@
                                     </a>
                                     <a class="product-card__name" href="#">
                                         <h3>
-                                            Чизбургер с листьями салата
+                                            Чизбургер с листьями салата 
                                         </h3>
                                     </a>
                                 </div>
@@ -155,7 +155,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-pizza">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -178,7 +178,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-pizza">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -201,7 +201,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-sandwich">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -224,7 +224,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-sandwich">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -247,7 +247,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-asia">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -271,7 +271,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-asia">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -294,7 +294,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-set">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -317,7 +317,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-set">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -340,7 +340,7 @@
                                 </div>
                             </article>
                         </li>
-                        <li class="category__element">
+                        <li class="category__element mix category-burger category-set">
                             <article class="product-card">
                                 <div class="product-card__top">
                                     <a class="product-card__img" href="#">
@@ -398,7 +398,7 @@
                                 </li>
                             </ul>
                             <a class="delivery__btn btn" tabindex="0">
-                                Подробнее
+                                Подробнее 
                             </a>
                         </div>
                     </div>
@@ -416,121 +416,109 @@
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-1.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-1.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             Blaze Pizza
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            11:00 - 22:00
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                11:00 - 22:00
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-2.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-2.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             Pizza Runcho
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            12:00 - 21:00
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                12:00 - 21:00
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-3.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-3.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             Pizza Hut
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            11:00 - 22:00
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                11:00 - 22:00
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-4.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-4.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             McDonald`s
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            06:00 - 23:00
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                06:00 - 23:00
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-5.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-5.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             KFC
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            06:00 - 23:30
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                06:00 - 23:30
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                         <li class="resturents__item">
                             <article class="resturent-card">
                                 <a class="resturent-card__img" href="#">
-                                    <img src="images/rest_img/rest-6.jpg" alt="">
-                                </a>
-                                <div class="resturent-card__info">
-                                    <a class="resturent-card__name" href="#">
-                                        <h3>
+                                    <img src="images/rest_img/rest-6.jpg" alt="Пицца на противне">
+                                    <div class="resturent-card__info">
+                                        <h3 class="resturent-card__name">
                                             Star Burgers
                                         </h3>
-                                    </a>
-                                    <div class="resturent-card__times">
-                                        <span>
-                                            09:00 - 21:00
-                                        </span>
-                                        <a class="resturent-card__btn btn" tabindex="0"></a>
+                                        <div class="resturent-card__bottom">
+                                            <span class="resturent-card__time">
+                                                09:00 - 21:00
+                                            </span>
+                                            <a class="resturent-card__btn btn" tabindex="0" href="#"></a>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </article>
                         </li>
                     </ul>
@@ -652,8 +640,10 @@
                                 </p>
                             </div>
                             <a class="mobile-app__link mobile-app__app-store" href="#">
+                                <span class="sr-only">перейти в app store</span>
                             </a>
                             <a class="mobile-app__link mobile-app__google-play" href="#">
+                                <span class="sr-only">перейти в google play</span>
                             </a>
                         </div>
                     </div>
