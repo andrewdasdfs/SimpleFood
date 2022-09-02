@@ -1,5 +1,5 @@
 body {
-    font-family: "Rubik";
+    font-family: "Rubik", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -15,15 +15,6 @@ body {
     flex-grow: 1;
 }
 
-a {
-    color: $dark;
-    outline: transparent;
-}
-
-button {
-    appearance: none;
-    line-height: 1.3;
-}
 
 .sr-only {
     position: absolute;
@@ -54,14 +45,18 @@ button {
 .link {
     border-radius: 5px;
     box-shadow: 0 0 0 2px rgba(249, 250, 255, 1);
-    transition: box-shadow 0.15s ease-in-out, text-shadow 0.15s ease-in-out,
-        color 0.1s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out,
+                text-shadow 0.15s ease-in-out,
+                color 0.1s ease-in-out;
+
     &:focus {
         box-shadow: $box-shadow;
     }
+
     &:hover {
         color: $orange-900;
     }
+
     &:active {
         text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
         box-shadow: 0 0 0 2px rgba(255, 104, 56, 0);
@@ -69,22 +64,45 @@ button {
     }
 }
 
+.footer__link--style {
+    transition: text-shadow 0.15s ease-in-out, 
+                color 0.1s ease-in-out;
+
+    &:focus,
+    &:hover {
+        color: $orange-900;
+    }
+
+    &:active {
+        text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+        color: $dark;
+    }
+}
+
 .btn {
     border-radius: 5px;
     color: $white;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     background-color: $orange-900;
-    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out,
+                color 0.15s ease-in-out;
+
     &:focus {
         box-shadow: $box-shadow;
         background-color: rgba(255, 122, 80, 0.1);
         color: $orange-900;
     }
+
     &:hover {
         box-shadow: $box-shadow;
         background-color: rgba(255, 122, 80, 0);
         color: $orange-900;
     }
+
     &:active {
         box-shadow: 0 0 0 0;
         background-color: rgba(255, 122, 80, 0.1);
@@ -96,43 +114,155 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 210px;
-    min-height: 300px;
+    height: 100%;
     padding: 20px 15px;
     border-radius: 5px;
     background-color: $white;
     box-shadow: 0 0 0 1px $silver-200;
     transition: box-shadow 0.15s ease-in-out;
+
     &__top,
     &__bottom {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    & img {
+
+    &__top {
         margin-bottom: 10px;
-        width: auto;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
     }
-    &__top span {
+
+    &__img {
+        margin-bottom: 10px;
+        & img {
+            width: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 1px $orange-900;
+    }
+
+    &__name h3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         font-size: 15px;
+        font-weight: 400;
         line-height: 1.2;
     }
-    &__bottom span {
+
+    &__price {
         margin-bottom: 10px;
         font-size: 15px;
         font-weight: 500;
         line-height: 1.4;
         color: $darkBlue-900;
     }
+
     &__btn {
         font-size: 14px;
         line-height: 1.3;
         padding: 7px 16px;
+        max-width: 150px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
+}
+
+.resturent-card {
+    display: flex; 
+    flex-direction: column;
+    min-width: 345px;
+    max-width: 370px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
     &:hover {
-        box-shadow: 0 0 0 1px $orange-900;
+        box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+    }
+
+    & img {
+        height: 300px;
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+
+    &__info {
+        text-align: left;
+        padding: 15px 20px 20px;
+    }
+
+    &__name {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        max-width: 285px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__time {
+        display: flex;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    &__time::before {
+        content: "";
+        width: 22px;
+        height: 22px;
+        background-image: url('../images/sprite.svg#timer');
+        background-size: cover;
+        margin-right: 10px;
+    }
+
+    &__btn {
+        width: 80px;
+        height: 33px;
+        border-radius: 20px;
+        position: relative;
+
+        &:hover::before {
+           left: 100%; 
+           transform: translate(-200%, -50%);
+        }
+
+        &:focus::before,
+        &:hover::before,
+        &:active::before {
+            background-color: $orange-900;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 12px;
+            background-color: $white;
+            mask-image: url('../images/sprite.svg#arrow_btn');
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;   
+        }
     }
 }
