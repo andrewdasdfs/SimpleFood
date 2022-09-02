@@ -1,0 +1,195 @@
+.reviews {
+    margin-bottom: 135px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+}
+
+.quote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    margin-bottom: 55px;
+
+    &__img {
+        min-width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin-right: 40px;
+        overflow: hidden;      
+    }
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__items {
+        max-width: 650px;
+        padding: 0 40px;
+    }
+
+    &__text {
+        font-style: italic;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 24px;
+            height: 20px;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            position: absolute;
+            background-color: $gray;
+        }
+
+        &::before {
+            mask-image: url('../images/sprite.svg#quot-1');
+            left: -40px;
+            top: 0;
+        }
+
+        &::after {
+            mask-image: url('../images/sprite.svg#quot-2');
+            right: -40px;
+            bottom: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        font-weight: 500;
+        color: $orange-900;
+    }
+
+    &__author {
+        margin-bottom: 15px;
+        line-height: 1.3;
+        font-weight: 500;
+        color: $orange-900;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 1.3;
+        color: $dark;
+    }
+}
+
+
+.slick-slider {
+
+    .slick-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        border: 3px solid $gray;
+        bottom: -12px;
+        transition: background-color 0.15s ease-in-out,
+                    border-color 0.15s ease-in-out,
+                    box-shadow 0.15s ease-in-out;
+
+        &::before {
+            content: "";
+            width: 11px;
+            height: 19px;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            mask-position: center;
+            background-color: $gray;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+        &:focus {
+            box-shadow: $box-shadow;
+        }
+
+        &:hover {
+            border-color: $background-02;
+            background-color: $background-01;
+        }
+
+        &:hover::before {
+            background-color: $background-02;
+        }
+
+        &:active {
+            border-color: $background-01;
+            background-color: $background-01;
+        }
+
+        &:active::before {
+            background-color: $background-03;
+        }
+    }
+
+    .slick-prev {
+        right: 50%;
+        transform: translateX(-72px);
+
+        &::before {
+            mask-image: url('../images/sprite.svg#prev');
+        }
+    }
+
+    .slick-next {
+        left: 50%;
+        transform: translateX(72px);
+
+        &::before {
+            mask-image: url('../images/sprite.svg#next');
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        font-size: 0;
+        background-color: transparent;
+
+        & li button {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: $gray;
+                    transition: background-color 0.15s ease-in-out,
+                    box-shadow 0.15s ease-in-out;
+        }
+
+        & li button:focus {
+            box-shadow: $box-shadow;
+        }
+
+        & li button:hover {
+            box-shadow: $box-shadow-02;
+            background-color: $background-01;
+        }
+
+        & li button:active {
+            box-shadow: none;
+            background-color: $background-02;
+        }
+
+        & .slick-active button {
+            background-color: $background-03;
+        }
+
+        & li:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}

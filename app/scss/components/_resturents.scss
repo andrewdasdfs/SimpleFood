@@ -1,0 +1,15 @@
+.resturents {
+    text-align: center;
+    margin-bottom: 120px;
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(345px, 370px));
+        gap: 30px;
+        justify-content: center;
+    }
+}
