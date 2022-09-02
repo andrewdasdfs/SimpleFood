@@ -185,3 +185,64 @@
         }
     }
 }
+
+.burger {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    &__line {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 2px;
+        background-color: $dark;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $dark;
+        transition: transform 0.25s ease-in-out,
+                    top 0.25s ease-in-out;
+    }
+
+    &::before {
+        top: 10px;
+    }
+
+    &::after {
+        top: calc(100% - 12px);
+    }
+
+    &--active &__line {
+        transform: scale(0);
+		transition: transform 0.25s ease-in-out;
+    }
+
+    &--active::before,
+    &--active::after {
+		top: 50%;
+		transition: transform 0.25s ease-in-out, 
+                    top 0.25s ease-in-out;
+    }
+
+    &--active::before {
+		transform: translateX(-50%) rotate(45deg);
+    }
+
+    &--active::after {
+		transform:translateX(-50%) rotate(-45deg);
+    }
+}

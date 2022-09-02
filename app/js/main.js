@@ -20,6 +20,10 @@ $(function () {
         }
     );
 
+    $(".burger").on("click", function () {
+        $(".burger").toggleClass("burger--active");
+    });
+
     $(".menu__link").on("click", function () {
         $(".menu__link").removeClass("menu__link--active");
         $(this).addClass("menu__link--active");
